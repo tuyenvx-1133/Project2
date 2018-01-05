@@ -13,4 +13,5 @@ struct Keys {
     static let message = "message"
     static let leftButtonTitle = "leftButtonTitle"
     static let rightButtonTitle = "rightButtonTitle"
+    static let image = "image"
 }

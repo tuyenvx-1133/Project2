@@ -85,7 +85,7 @@
                                         <color key="textColor" red="0.30193233489990234" green="0.30197960138320923" blue="0.3019174337387085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CÀI ĐẶT LẠI MÂT KHẨU, MẬT KHẨU CỦA BẠN ĐANG QUÁ DÀI, BẠN CẦN CÀI ĐẶT LẠI MẬT KHẨU MỚI NGĂN HƠN NHA" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-3h-rbm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mesage" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4S-3h-rbm">
                                         <rect key="frame" x="20" y="57" width="294" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="mHy-oP-7jC"/>
@@ -162,7 +162,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YU2-r5-ePz" firstAttribute="leading" secondItem="8qa-GQ-sUr" secondAttribute="leading" constant="20" id="0WG-6Y-cho"/>
                             <constraint firstItem="YU2-r5-ePz" firstAttribute="centerY" secondItem="8qa-GQ-sUr" secondAttribute="centerY" id="Lmq-jQ-8Mk"/>

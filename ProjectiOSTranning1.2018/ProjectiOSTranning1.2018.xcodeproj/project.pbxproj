@@ -10,13 +10,20 @@
 		76DA42C2B056B034D8059C70 /* Pods_ProjectiOSTranning1_2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D319A17306B75F091E9574A7 /* Pods_ProjectiOSTranning1_2018Tests.framework */; };
 		8D2F073209D8B8264D1E9014 /* Pods_ProjectiOSTranning1_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CE71C5D256E8B899A8E93F /* Pods_ProjectiOSTranning1_2018UITests.framework */; };
 		BEBD5DF45B1B02410941DCBB /* Pods_ProjectiOSTranning1_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A01F2436BC99320FABB1B /* Pods_ProjectiOSTranning1_2018.framework */; };
+		CC39F29D20044F1A0046922D /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC39F29C20044F1A0046922D /* CustomButton.swift */; };
 		CC3F5B081FFF1D1400A3809F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F5B071FFF1D1400A3809F /* Config.swift */; };
 		CC3F5B0A1FFF2D1A00A3809F /* MoMoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F5B091FFF2D1A00A3809F /* MoMoViewController.swift */; };
+		CC3F5B0F1FFF7AC600A3809F /* AppGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F5B0E1FFF7AC600A3809F /* AppGlobal.swift */; };
 		CC4BAEE31FFCAABB008B93EA /* DCornerDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE21FFCAABB008B93EA /* DCornerDrawable.swift */; };
 		CC4BAEE71FFCB7FE008B93EA /* DUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE61FFCB7FE008B93EA /* DUIVIew.swift */; };
 		CC4BAEE91FFCC078008B93EA /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE81FFCC078008B93EA /* ViewControllerExt.swift */; };
 		CC4BAEEB1FFCC355008B93EA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEEA1FFCC355008B93EA /* BaseViewController.swift */; };
 		CC4BAEF11FFCCA7A008B93EA /* VCInNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEF01FFCCA7A008B93EA /* VCInNavigation.swift */; };
+		CC4DF50E2002F97F00FADAB8 /* MoMoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4DF50C2002F97F00FADAB8 /* MoMoCollectionViewCell.swift */; };
+		CC4DF50F2002F97F00FADAB8 /* MoMoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4DF50D2002F97F00FADAB8 /* MoMoCollectionViewCell.xib */; };
+		CC4DF5112002FD1E00FADAB8 /* CollectionViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4DF5102002FD1E00FADAB8 /* CollectionViewExt.swift */; };
+		CCD9FCDA2005B48200FBD9EA /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD9FCD82005B48200FBD9EA /* HeaderCollectionReusableView.swift */; };
+		CCD9FCDB2005B48200FBD9EA /* HeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD9FCD92005B48200FBD9EA /* HeaderCollectionReusableView.xib */; };
 		CCEDA0BD1FFDC87A0097D15B /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEDA0BC1FFDC87A0097D15B /* LaunchViewController.swift */; };
 		CCEDA0C01FFDCAB10097D15B /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEDA0BF1FFDCAB10097D15B /* Account.storyboard */; };
 		CCEDA0C21FFDCAE80097D15B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEDA0C11FFDCAE80097D15B /* LoginViewController.swift */; };
@@ -66,14 +73,21 @@
 		81C3AFEE0640A21CD966C343 /* Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018Tests/Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		89BA02710CBABEF41D191F83 /* Pods-ProjectiOSTranning1.2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018/Pods-ProjectiOSTranning1.2018.release.xcconfig"; sourceTree = "<group>"; };
 		C2AFFB03ECAB922051F4BE0A /* Pods-ProjectiOSTranning1.2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018UITests/Pods-ProjectiOSTranning1.2018UITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC39F29C20044F1A0046922D /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		CC3F5B071FFF1D1400A3809F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		CC3F5B091FFF2D1A00A3809F /* MoMoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoMoViewController.swift; sourceTree = "<group>"; };
+		CC3F5B0E1FFF7AC600A3809F /* AppGlobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGlobal.swift; sourceTree = "<group>"; };
 		CC4BAEE21FFCAABB008B93EA /* DCornerDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCornerDrawable.swift; sourceTree = "<group>"; };
 		CC4BAEE61FFCB7FE008B93EA /* DUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUIVIew.swift; sourceTree = "<group>"; };
 		CC4BAEE81FFCC078008B93EA /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
 		CC4BAEEA1FFCC355008B93EA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC4BAEF01FFCCA7A008B93EA /* VCInNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCInNavigation.swift; sourceTree = "<group>"; };
+		CC4DF50C2002F97F00FADAB8 /* MoMoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoMoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CC4DF50D2002F97F00FADAB8 /* MoMoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoMoCollectionViewCell.xib; sourceTree = "<group>"; };
+		CC4DF5102002FD1E00FADAB8 /* CollectionViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExt.swift; sourceTree = "<group>"; };
 		CC6F7332CF82C54E3BC82314 /* Pods-ProjectiOSTranning1.2018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018/Pods-ProjectiOSTranning1.2018.debug.xcconfig"; sourceTree = "<group>"; };
+		CCD9FCD82005B48200FBD9EA /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		CCD9FCD92005B48200FBD9EA /* HeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		CCEDA0BC1FFDC87A0097D15B /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CCEDA0BF1FFDCAB10097D15B /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		CCEDA0C11FFDCAE80097D15B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +161,32 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CC3F5B0D1FFF7AB100A3809F /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CC3F5B0E1FFF7AC600A3809F /* AppGlobal.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CC4DF5092002F90400FADAB8 /* MoMo CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				CC4DF50C2002F97F00FADAB8 /* MoMoCollectionViewCell.swift */,
+				CC4DF50D2002F97F00FADAB8 /* MoMoCollectionViewCell.xib */,
+			);
+			path = "MoMo CollectionCell";
+			sourceTree = "<group>";
+		};
+		CCD9FCD72005B3EA00FBD9EA /* Header of section */ = {
+			isa = PBXGroup;
+			children = (
+				CCD9FCD82005B48200FBD9EA /* HeaderCollectionReusableView.swift */,
+				CCD9FCD92005B48200FBD9EA /* HeaderCollectionReusableView.xib */,
+			);
+			path = "Header of section";
+			sourceTree = "<group>";
+		};
 		CCEDA0BB1FFDC8510097D15B /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +235,8 @@
 		CCEDA0D61FFE28A30097D15B /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				CCD9FCD72005B3EA00FBD9EA /* Header of section */,
+				CC39F29C20044F1A0046922D /* CustomButton.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -312,6 +354,7 @@
 		CCEFBFAF1FFC86D900024A59 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CC4DF5092002F90400FADAB8 /* MoMo CollectionCell */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -354,6 +397,7 @@
 		CCEFBFBD1FFC945300024A59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				CC3F5B0D1FFF7AB100A3809F /* Global */,
 				CCEFBFC41FFC949D00024A59 /* Controllers */,
 				CCEFBFC31FFC949300024A59 /* Extentions */,
 				CCEFBFC21FFC948800024A59 /* Protocol */,
@@ -409,6 +453,7 @@
 			children = (
 				CCEFBFC51FFC94D000024A59 /* ColorExt.swift */,
 				CC4BAEE81FFCC078008B93EA /* ViewControllerExt.swift */,
+				CC4DF5102002FD1E00FADAB8 /* CollectionViewExt.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -552,8 +597,10 @@
 				CCEFBF851FFC832800024A59 /* LaunchScreen.storyboard in Resources */,
 				CCEDA0CF1FFE12140097D15B /* Wallet.storyboard in Resources */,
 				CCEFBF821FFC832800024A59 /* Assets.xcassets in Resources */,
+				CC4DF50F2002F97F00FADAB8 /* MoMoCollectionViewCell.xib in Resources */,
 				CCEDA0CD1FFE120A0097D15B /* Transaction.storyboard in Resources */,
 				CCEDA0CB1FFE11E80097D15B /* Special.storyboard in Resources */,
+				CCD9FCDB2005B48200FBD9EA /* HeaderCollectionReusableView.xib in Resources */,
 				CCEDA0C91FFE11C70097D15B /* MoMo.storyboard in Resources */,
 				CCEDA0C01FFDCAB10097D15B /* Account.storyboard in Resources */,
 				CCEFBF801FFC832800024A59 /* Main.storyboard in Resources */,
@@ -742,23 +789,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3F5B0F1FFF7AC600A3809F /* AppGlobal.swift in Sources */,
+				CC4DF5112002FD1E00FADAB8 /* CollectionViewExt.swift in Sources */,
 				CC4BAEE91FFCC078008B93EA /* ViewControllerExt.swift in Sources */,
 				CCEFBFB41FFC917500024A59 /* Func.swift in Sources */,
 				CC4BAEE71FFCB7FE008B93EA /* DUIVIew.swift in Sources */,
 				CCEDA0C21FFDCAE80097D15B /* LoginViewController.swift in Sources */,
 				CC4BAEE31FFCAABB008B93EA /* DCornerDrawable.swift in Sources */,
 				CCEDA0D11FFE1F180097D15B /* AppInfo.swift in Sources */,
+				CCD9FCDA2005B48200FBD9EA /* HeaderCollectionReusableView.swift in Sources */,
 				CCEFBFC61FFC94D000024A59 /* ColorExt.swift in Sources */,
 				CCEDA0DB1FFE31540097D15B /* Keys.swift in Sources */,
 				CC3F5B081FFF1D1400A3809F /* Config.swift in Sources */,
 				CCEDA0BD1FFDC87A0097D15B /* LaunchViewController.swift in Sources */,
 				CCEDA0D91FFE2AE30097D15B /* AlertViewController.swift in Sources */,
+				CC4DF50E2002F97F00FADAB8 /* MoMoCollectionViewCell.swift in Sources */,
 				CC4BAEEB1FFCC355008B93EA /* BaseViewController.swift in Sources */,
 				CCEFBFC91FFC954900024A59 /* Font.swift in Sources */,
 				CCEFBFB61FFC935200024A59 /* ViewDefine.swift in Sources */,
 				CC4BAEF11FFCCA7A008B93EA /* VCInNavigation.swift in Sources */,
 				CCEFBFBC1FFC942300024A59 /* Color.swift in Sources */,
 				CCEFBFCD1FFC960400024A59 /* MainViewController.swift in Sources */,
+				CC39F29D20044F1A0046922D /* CustomButton.swift in Sources */,
 				CCEFBFCB1FFC95C700024A59 /* UIViewController.swift in Sources */,
 				CC3F5B0A1FFF2D1A00A3809F /* MoMoViewController.swift in Sources */,
 				CCEFBF7B1FFC832800024A59 /* AppDelegate.swift in Sources */,
