@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
     @IBOutlet weak private var userNameLabel: UILabel!
     @IBOutlet weak private var phoneNumberLabel: UILabel!
     @IBOutlet weak private var passwordTextfield: UITextField!
@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak private var fingerButton: UIButton!
     @IBOutlet weak private var mainView: UIView!
     @IBOutlet weak private var mainViewCenterYConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var subPasswordLabel: UILabel!
+    @IBOutlet weak private var subPasswordLabelGray: UILabel!
+    @IBOutlet weak private var subPasswordView: UIView!
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,8 @@ class LoginViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(hideKeyboard))
         mainView.addGestureRecognizer(tapGesture)
         view.addGestureRecognizer(tapGesture)
+        passwordTextfield.delegate = self
+        subPasswordLabel.text = createDotString(numberOfDot: 6)
     }
     // MARK: - IBAction
     @IBAction func login(_ sender: Any) {
@@ -67,6 +72,13 @@ class LoginViewController: UIViewController {
     }
     func showWrongPasswordLabel() {
         wrongPasswordLabelHeightConstraint.constant = 35
+    }
+    func createDotString(numberOfDot: Int) -> String {
+        var string = ""
+        for _ in 0 ..< numberOfDot {
+            string.append(Config.dotString)
+        }
+        return string
     }
     // MARK: - Keyboard
     func addKeyBoardNotifi() {
@@ -109,5 +121,26 @@ extension LoginViewController: AlertViewControllerDelegate {
         case .changePhoneNumber:
             print("Alert changePhoneNumber")
         }
+    }
+}
+// MARK: - UITextfield Delegate
+extension LoginViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let newText = NSString(string: textField.text!).replacingCharacters(in: range, with: string)
+        if textField.text?.count == 0 {
+            subPasswordView.alpha = 1
+        } else if newText.count == 0 {
+            subPasswordView.alpha = 0
+        }
+        subPasswordLabelGray.text = createDotString(numberOfDot: newText.count)
+        if newText.count == 6 {
+            passwordTextfield.text = newText
+            login((Any).self)
+        }
+        return true
+    }
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        subPasswordView.alpha = 0.0
+        return true
     }
 }

@@ -10,6 +10,8 @@
 		76DA42C2B056B034D8059C70 /* Pods_ProjectiOSTranning1_2018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D319A17306B75F091E9574A7 /* Pods_ProjectiOSTranning1_2018Tests.framework */; };
 		8D2F073209D8B8264D1E9014 /* Pods_ProjectiOSTranning1_2018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3CE71C5D256E8B899A8E93F /* Pods_ProjectiOSTranning1_2018UITests.framework */; };
 		BEBD5DF45B1B02410941DCBB /* Pods_ProjectiOSTranning1_2018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443A01F2436BC99320FABB1B /* Pods_ProjectiOSTranning1_2018.framework */; };
+		CC3F5B081FFF1D1400A3809F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F5B071FFF1D1400A3809F /* Config.swift */; };
+		CC3F5B0A1FFF2D1A00A3809F /* MoMoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3F5B091FFF2D1A00A3809F /* MoMoViewController.swift */; };
 		CC4BAEE31FFCAABB008B93EA /* DCornerDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE21FFCAABB008B93EA /* DCornerDrawable.swift */; };
 		CC4BAEE71FFCB7FE008B93EA /* DUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE61FFCB7FE008B93EA /* DUIVIew.swift */; };
 		CC4BAEE91FFCC078008B93EA /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4BAEE81FFCC078008B93EA /* ViewControllerExt.swift */; };
@@ -64,6 +66,8 @@
 		81C3AFEE0640A21CD966C343 /* Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018Tests/Pods-ProjectiOSTranning1.2018Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		89BA02710CBABEF41D191F83 /* Pods-ProjectiOSTranning1.2018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018/Pods-ProjectiOSTranning1.2018.release.xcconfig"; sourceTree = "<group>"; };
 		C2AFFB03ECAB922051F4BE0A /* Pods-ProjectiOSTranning1.2018UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectiOSTranning1.2018UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectiOSTranning1.2018UITests/Pods-ProjectiOSTranning1.2018UITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC3F5B071FFF1D1400A3809F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CC3F5B091FFF2D1A00A3809F /* MoMoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoMoViewController.swift; sourceTree = "<group>"; };
 		CC4BAEE21FFCAABB008B93EA /* DCornerDrawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCornerDrawable.swift; sourceTree = "<group>"; };
 		CC4BAEE61FFCB7FE008B93EA /* DUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUIVIew.swift; sourceTree = "<group>"; };
 		CC4BAEE81FFCC078008B93EA /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		CCEDA0C41FFE10870097D15B /* MoMo Tab */ = {
 			isa = PBXGroup;
 			children = (
+				CC3F5B091FFF2D1A00A3809F /* MoMoViewController.swift */,
 			);
 			path = "MoMo Tab";
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				CCEFBFB31FFC917500024A59 /* Func.swift */,
 				CCEFBFB51FFC935200024A59 /* ViewDefine.swift */,
 				CCEDA0DA1FFE31540097D15B /* Keys.swift */,
+				CC3F5B071FFF1D1400A3809F /* Config.swift */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -744,6 +750,7 @@
 				CCEDA0D11FFE1F180097D15B /* AppInfo.swift in Sources */,
 				CCEFBFC61FFC94D000024A59 /* ColorExt.swift in Sources */,
 				CCEDA0DB1FFE31540097D15B /* Keys.swift in Sources */,
+				CC3F5B081FFF1D1400A3809F /* Config.swift in Sources */,
 				CCEDA0BD1FFDC87A0097D15B /* LaunchViewController.swift in Sources */,
 				CCEDA0D91FFE2AE30097D15B /* AlertViewController.swift in Sources */,
 				CC4BAEEB1FFCC355008B93EA /* BaseViewController.swift in Sources */,
@@ -753,6 +760,7 @@
 				CCEFBFBC1FFC942300024A59 /* Color.swift in Sources */,
 				CCEFBFCD1FFC960400024A59 /* MainViewController.swift in Sources */,
 				CCEFBFCB1FFC95C700024A59 /* UIViewController.swift in Sources */,
+				CC3F5B0A1FFF2D1A00A3809F /* MoMoViewController.swift in Sources */,
 				CCEFBF7B1FFC832800024A59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,20 +42,55 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIW-fy-dXs">
                                         <rect key="frame" x="30" y="56" width="284" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập mật khẩu" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-oZ-NSA">
-                                                <rect key="frame" x="40" y="0.0" width="204" height="60"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập mật khẩu" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-oZ-NSA">
+                                                <rect key="frame" x="87" y="0.0" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="nRB-te-zoY"/>
+                                                </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" secureTextEntry="YES"/>
                                             </textField>
+                                            <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9c-7w-6HO">
+                                                <rect key="frame" x="82" y="0.0" width="120" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRA-fO-erG">
+                                                        <rect key="frame" x="5" y="23" width="110" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="110" id="IUY-BA-b4g"/>
+                                                            <constraint firstAttribute="height" constant="15" id="cPF-TF-krv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.84306573867797852" green="0.8431847095489502" blue="0.84302830696105957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydl-JG-9qg">
+                                                        <rect key="frame" x="5" y="23" width="110" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <color key="textColor" red="0.56465643644332886" green="0.56473857164382935" blue="0.56463062763214111" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="0gX-nJ-Xby"/>
+                                                    <constraint firstItem="ydl-JG-9qg" firstAttribute="width" secondItem="mRA-fO-erG" secondAttribute="width" id="3uu-NQ-BtJ"/>
+                                                    <constraint firstItem="ydl-JG-9qg" firstAttribute="height" secondItem="mRA-fO-erG" secondAttribute="height" id="QgT-3v-spM"/>
+                                                    <constraint firstItem="mRA-fO-erG" firstAttribute="centerX" secondItem="V9c-7w-6HO" secondAttribute="centerX" id="fTr-4w-ZDL"/>
+                                                    <constraint firstItem="mRA-fO-erG" firstAttribute="centerY" secondItem="V9c-7w-6HO" secondAttribute="centerY" id="jWS-jo-tJc"/>
+                                                    <constraint firstItem="ydl-JG-9qg" firstAttribute="centerY" secondItem="V9c-7w-6HO" secondAttribute="centerY" id="mF0-Er-J8O"/>
+                                                    <constraint firstItem="ydl-JG-9qg" firstAttribute="centerX" secondItem="V9c-7w-6HO" secondAttribute="centerX" id="pFZ-6u-86r"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="C0D-oZ-NSA" firstAttribute="leading" secondItem="NIW-fy-dXs" secondAttribute="leading" constant="40" id="0T9-vA-qJK"/>
                                             <constraint firstItem="C0D-oZ-NSA" firstAttribute="top" secondItem="NIW-fy-dXs" secondAttribute="top" id="JBZ-sH-mXS"/>
+                                            <constraint firstItem="V9c-7w-6HO" firstAttribute="centerX" secondItem="NIW-fy-dXs" secondAttribute="centerX" id="JZG-4o-qJa"/>
+                                            <constraint firstItem="V9c-7w-6HO" firstAttribute="centerY" secondItem="C0D-oZ-NSA" secondAttribute="centerY" id="PXc-w8-n3W"/>
                                             <constraint firstItem="C0D-oZ-NSA" firstAttribute="centerY" secondItem="NIW-fy-dXs" secondAttribute="centerY" id="RMm-JN-Gea"/>
-                                            <constraint firstItem="C0D-oZ-NSA" firstAttribute="centerX" secondItem="NIW-fy-dXs" secondAttribute="centerX" id="TXd-sy-OJH"/>
+                                            <constraint firstItem="C0D-oZ-NSA" firstAttribute="centerX" secondItem="NIW-fy-dXs" secondAttribute="centerX" constant="20" id="TXd-sy-OJH"/>
+                                            <constraint firstItem="V9c-7w-6HO" firstAttribute="height" secondItem="C0D-oZ-NSA" secondAttribute="height" id="d2z-27-FCo"/>
                                             <constraint firstAttribute="height" constant="60" id="fXf-Em-m5w"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -181,6 +216,9 @@
                         <outlet property="mainViewCenterYConstraint" destination="rDE-h6-7Ld" id="ZPs-jL-wFS"/>
                         <outlet property="passwordTextfield" destination="C0D-oZ-NSA" id="SJo-0z-02G"/>
                         <outlet property="phoneNumberLabel" destination="ueN-FH-zSe" id="bhU-50-OD3"/>
+                        <outlet property="subPasswordLabel" destination="mRA-fO-erG" id="7p8-Xf-5UF"/>
+                        <outlet property="subPasswordLabelGray" destination="ydl-JG-9qg" id="d4G-9X-Ty8"/>
+                        <outlet property="subPasswordView" destination="V9c-7w-6HO" id="VRs-vy-RK2"/>
                         <outlet property="userNameLabel" destination="XWs-2z-mIj" id="iho-jN-oKV"/>
                         <outlet property="wrongPasswordLabelHeightConstraint" destination="fTN-gf-X2D" id="XJz-xq-JMR"/>
                     </connections>

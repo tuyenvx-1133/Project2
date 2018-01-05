@@ -40,11 +40,11 @@ class BaseViewController: UIViewController, VCInNavigation {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     deinit {
         logD("\(String(describing: self))")
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     // MARK: - Setup View
     // MARK: - Actions
