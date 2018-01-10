@@ -11,6 +11,7 @@ import UIKit
 enum AlertType {
     case forgetPassword
     case changePhoneNumber
+    case logout
 }
 
 protocol AlertViewControllerDelegate: class {
@@ -48,6 +49,13 @@ class AlertViewController: UIViewController {
                 Keys.title: "",
                 Keys.message: "Bạn có chắc chắn muốn thay đổi số điện thoại của bạn?",
                 Keys.leftButtonTitle: "HUỶ",
+                Keys.rightButtonTitle: "ĐỒNG Ý"
+            ]
+        case .logout:
+            info = [
+                Keys.title: "Đăng xuất",
+                Keys.message: "Bạn có muốn đăng xuất tài khoản này?",
+                Keys.leftButtonTitle: "KHÔNG",
                 Keys.rightButtonTitle: "ĐỒNG Ý"
             ]
         }

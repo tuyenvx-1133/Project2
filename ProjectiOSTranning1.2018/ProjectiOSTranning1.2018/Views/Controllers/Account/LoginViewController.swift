@@ -120,6 +120,8 @@ extension LoginViewController: AlertViewControllerDelegate {
             print("Alert forgetpass")
         case .changePhoneNumber:
             print("Alert changePhoneNumber")
+        default:
+            print("Do no thing")
         }
     }
 }
