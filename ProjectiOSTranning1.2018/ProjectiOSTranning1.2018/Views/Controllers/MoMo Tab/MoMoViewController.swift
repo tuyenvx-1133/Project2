@@ -17,7 +17,7 @@ class MoMoViewController: BaseViewController {
     @IBOutlet weak private var stackView: UIStackView!
     var items: [[String: String]] = {
         var array: [[String: String]] = [[String: String]]()
-        var titles = ["Nạp tiền điện thoại","Chuyển tiền","Liên kết tài khoản","Mua mã thẻ di động","Thanh toán vay tiêu dùng","Thanh toán điện","Mua vé xem phim","Thanh toán Internet","Xem thêm"]
+        var titles = ["Nạp tiền điện thoại", "Chuyển tiền", "Liên kết tài khoản", "Mua mã thẻ di động", "Thanh toán vay tiêu dùng", "Thanh toán điện", "Mua vé xem phim", "Thanh toán Internet", "Xem thêm"]
         for i in 1...9 {
             let imageName = "Item_\(i)"
             let item = [
@@ -47,6 +47,16 @@ class MoMoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDefaults()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isSwipeDown {
+            accountViewTopConstraint.constant = 80
+            changeFrame(value: 80)
+        } else {
+            accountViewTopConstraint.constant = 0
+            changeFrame(value: 0)
+        }
     }
     // MARK: -
     // MARK: - Init

@@ -20,8 +20,14 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak private var mainView: UIView!
     @IBOutlet weak private var mainViewCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak private var subPasswordLabel: UILabel!
-    @IBOutlet weak private var subPasswordLabelGray: UILabel!
     @IBOutlet weak private var subPasswordView: UIView!
+    let passwordString: String = {
+        var string = ""
+        for _ in 0 ..< 6 {
+            string.append(Config.dotString)
+        }
+        return string
+    }()
     // MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +47,7 @@ class LoginViewController: BaseViewController {
         mainView.addGestureRecognizer(tapGesture)
         view.addGestureRecognizer(tapGesture)
         passwordTextfield.delegate = self
-        subPasswordLabel.text = createDotString(numberOfDot: 6)
+        subPasswordLabel.attributedText = createDotString(numberOfDot: 0)
     }
     // MARK: - IBAction
     @IBAction func login(_ sender: Any) {
@@ -73,12 +79,12 @@ class LoginViewController: BaseViewController {
     func showWrongPasswordLabel() {
         wrongPasswordLabelHeightConstraint.constant = 35
     }
-    func createDotString(numberOfDot: Int) -> String {
-        var string = ""
-        for _ in 0 ..< numberOfDot {
-            string.append(Config.dotString)
-        }
-        return string
+    func createDotString(numberOfDot: Int) -> NSAttributedString {
+        let attributedString = NSMutableAttributedString.init(string: passwordString)
+        print(passwordString)
+        print(numberOfDot)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.passwordGrayColor, range: NSRange.init(location: 0, length: numberOfDot * 2))
+        return attributedString
     }
     // MARK: - Keyboard
     func addKeyBoardNotifi() {
@@ -134,7 +140,8 @@ extension LoginViewController: UITextFieldDelegate {
         } else if newText.count == 0 {
             subPasswordView.alpha = 0
         }
-        subPasswordLabelGray.text = createDotString(numberOfDot: newText.count)
+        subPasswordLabel.attributedText = createDotString(numberOfDot: newText.count)
+        logD(newText)
         if newText.count == 6 {
             passwordTextfield.text = newText
             login((Any).self)

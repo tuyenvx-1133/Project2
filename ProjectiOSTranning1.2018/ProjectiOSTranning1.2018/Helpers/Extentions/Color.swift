@@ -12,4 +12,7 @@ extension UIColor {
     class var mainColor: UIColor {
         return UIColor(hex: "#AF0F6D")!
     }
+    class var passwordGrayColor: UIColor {
+        return UIColor(hex: "#929292")!
+        }
 }
