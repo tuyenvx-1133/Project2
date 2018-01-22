@@ -10,6 +10,32 @@ import UIKit
 
 class MoMoViewController: BaseViewController {
     @IBOutlet weak private var accountViewTopConstraint: NSLayoutConstraint!
+    var accountViewTop: CGFloat {
+        get {
+            return accountViewTopConstraint.constant
+        }
+        set {
+            accountViewTopConstraint.constant = newValue
+            changeFrame(value: newValue)
+        }
+    }
+    var offsetY: CGFloat {
+        get {
+            return collectionView.contentOffset.y
+        }
+        set {
+            var contentOffset = collectionView.contentOffset
+            contentOffset.y = newValue
+            self.collectionView.setContentOffset(contentOffset, animated: false)
+            if newValue > 0 {
+                self.accountViewTop = 0
+            } else if newValue < -80 {
+                self.accountViewTop = 80
+            } else {
+                self.accountViewTop = -newValue
+            }
+        }
+    }
     @IBOutlet weak private var btnSearch: UIButton!
     @IBOutlet weak private var logoutButton: UIButton!
     @IBOutlet weak private var accountLabel: UILabel!
@@ -30,7 +56,6 @@ class MoMoViewController: BaseViewController {
     }()
     var point: CGPoint = CGPoint.init()
     var isSwipeDown = false
-    var timer = Timer()
     //
     let deltaTrailingContant = Device.screenWidth / 3.0 - 20 // 100% of Trailing contant
     @IBOutlet weak private var stackViewLeadingConstraint: NSLayoutConstraint!
@@ -48,14 +73,17 @@ class MoMoViewController: BaseViewController {
         super.viewDidLoad()
         setDefaults()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+        collectionView.contentInset = UIEdgeInsets.init(top: 80, left: 0, bottom: 0, right: 0)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isSwipeDown {
-            accountViewTopConstraint.constant = 80
-            changeFrame(value: 80)
+            accountViewTop = 80
         } else {
-            accountViewTopConstraint.constant = 0
-            changeFrame(value: 0)
+            accountViewTop = 0
         }
     }
     // MARK: -
@@ -110,28 +138,6 @@ class MoMoViewController: BaseViewController {
         drawingButton.upDate(percent: percent)
         codeButton.upDate(percent: percent)
         scanCodeButton.upDate(percent: percent)
-    }
-    @objc func swipeUp() {
-        let contant = accountViewTopConstraint.constant - 10
-        if contant <= 0 {
-            accountViewTopConstraint.constant = 0
-            changeFrame(value: 0)
-        } else {
-            accountViewTopConstraint.constant = contant
-            changeFrame(value: contant)
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(swipeUp), userInfo: nil, repeats: false)
-        }
-    }
-    @objc func swipeDown() {
-        let contant = accountViewTopConstraint.constant + 10
-        if contant >= 80 {
-            accountViewTopConstraint.constant = 80
-            changeFrame(value: 80)
-        } else {
-            accountViewTopConstraint.constant = contant
-            changeFrame(value: contant)
-            timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(swipeDown), userInfo: nil, repeats: false)
-        }
     }
 }
 // MARK: -
@@ -200,7 +206,6 @@ extension MoMoViewController: UICollectionViewDelegate {
 // MARK: - UIScrollView Delegate
 extension MoMoViewController {
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        point = scrollView.panGestureRecognizer.location(in: view)
         if accountViewTopConstraint.constant <= 0 {
             isSwipeDown = true
         } else if accountViewTopConstraint.constant >= 80 {
@@ -208,30 +213,29 @@ extension MoMoViewController {
         }
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let newPoint = scrollView.panGestureRecognizer.location(in: view)
-        let dentalY = newPoint.y - point.y
-        let contant = accountViewTopConstraint.constant + dentalY
+        let newValue = scrollView.contentOffset.y
+        if newValue > 0 {
+            accountViewTop = 0
+        } else if newValue < -80 {
+            accountViewTop = 80
+        } else {
+            accountViewTop = -newValue
+        }
         // direction
-        if isSwipeDown && accountViewTopConstraint.constant > 40 && contant <= 40 {
+        if isSwipeDown && accountViewTopConstraint.constant > 40 && -newValue <= 40 {
             isSwipeDown = false
-        } else if !isSwipeDown && accountViewTopConstraint.constant < 40 && contant >= 40 {
+        } else if !isSwipeDown && accountViewTopConstraint.constant < 40 && -newValue >= 40 {
             isSwipeDown = true
         }
-        //
-        point = newPoint
-        if contant < 0 {
-            accountViewTopConstraint.constant = 0
-        } else if contant > 80 {
-            accountViewTopConstraint.constant = 80
-        } else {
-            if accountViewTopConstraint.constant == 0 && collectionView.contentOffset.y > 0 {
-                return
-            }
-            accountViewTopConstraint.constant = contant
-        }
-        changeFrame(value: contant)
     }
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        endScroll()
+    }
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        endScroll()
+    }
+    func endScroll() {
+        print("End scroll")
         if accountViewTopConstraint.constant == 0 || accountViewTopConstraint.constant == 80 {
             return
         }
@@ -239,6 +243,27 @@ extension MoMoViewController {
             swipeDown()
         } else {
             swipeUp()
+        }
+    }
+    func swipeDown() {
+        if offsetY < -80 {
+            offsetY = -80
+            return
+        }
+        self.offsetY -= 5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute: {
+            self.swipeDown()
+        })
+    }
+    func swipeUp() {
+        print(offsetY)
+        if offsetY > 0 {
+            offsetY = 0
+            return
+        }
+        offsetY += 5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            self.swipeUp()
         }
     }
 }
