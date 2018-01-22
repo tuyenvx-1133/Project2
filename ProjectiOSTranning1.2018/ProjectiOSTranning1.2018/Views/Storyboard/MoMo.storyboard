@@ -20,11 +20,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover image" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-5p-HMI">
-                                <rect key="frame" x="0.0" y="20" width="375" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="9eN-Na-U02"/>
-                                </constraints>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sm7-Y0-SFO">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LWG-W6-tt2">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover image" translatesAutoresizingMaskIntoConstraints="NO" id="EAU-5p-HMI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="130"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0c-83-9UI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
@@ -178,17 +186,6 @@
                                     <constraint firstItem="p5z-1u-Ezl" firstAttribute="centerY" secondItem="8ft-xS-Fiv" secondAttribute="centerY" id="wvO-qi-eo7"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Sm7-Y0-SFO">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LWG-W6-tt2">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.19454619288444519" green="0.31994697451591492" blue="0.24695640802383423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -196,17 +193,18 @@
                             <constraint firstItem="8ft-xS-Fiv" firstAttribute="leading" secondItem="Caa-hd-f37" secondAttribute="leading" id="0xo-uh-JSo"/>
                             <constraint firstItem="EAU-5p-HMI" firstAttribute="leading" secondItem="gwR-4n-ccL" secondAttribute="leading" id="2FO-Nd-LS1"/>
                             <constraint firstItem="a0c-83-9UI" firstAttribute="trailing" secondItem="Caa-hd-f37" secondAttribute="trailing" id="4Vh-Hf-JNR"/>
-                            <constraint firstItem="Caa-hd-f37" firstAttribute="trailing" secondItem="Sm7-Y0-SFO" secondAttribute="trailing" id="9JV-eH-dNy"/>
                             <constraint firstItem="Caa-hd-f37" firstAttribute="trailing" secondItem="EAU-5p-HMI" secondAttribute="trailing" id="Ezt-FI-fIL"/>
-                            <constraint firstItem="Caa-hd-f37" firstAttribute="bottom" secondItem="Sm7-Y0-SFO" secondAttribute="bottom" id="KeR-Pp-bwv"/>
+                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="trailing" secondItem="Caa-hd-f37" secondAttribute="trailing" id="FAX-m7-Myu"/>
                             <constraint firstItem="a0c-83-9UI" firstAttribute="leading" secondItem="Caa-hd-f37" secondAttribute="leading" id="Lzn-Zv-KOU"/>
                             <constraint firstItem="a0c-83-9UI" firstAttribute="top" secondItem="Caa-hd-f37" secondAttribute="top" id="OPK-Fr-N9J"/>
                             <constraint firstItem="8ft-xS-Fiv" firstAttribute="top" secondItem="a0c-83-9UI" secondAttribute="bottom" constant="80" id="bPV-o3-0zI"/>
                             <constraint firstItem="VKq-pQ-pLm" firstAttribute="leading" secondItem="Caa-hd-f37" secondAttribute="leading" id="cPo-BZ-SrN"/>
+                            <constraint firstItem="EAU-5p-HMI" firstAttribute="bottom" secondItem="VKq-pQ-pLm" secondAttribute="bottom" id="ckC-M7-zOK"/>
                             <constraint firstItem="EAU-5p-HMI" firstAttribute="top" secondItem="gwR-4n-ccL" secondAttribute="top" constant="20" id="kRY-aq-8JG"/>
-                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="top" secondItem="8ft-xS-Fiv" secondAttribute="bottom" id="old-D4-xnM"/>
+                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="top" secondItem="EAU-5p-HMI" secondAttribute="top" constant="100" id="le5-xR-OrT"/>
+                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="leading" secondItem="Caa-hd-f37" secondAttribute="leading" id="lsr-N7-iDM"/>
                             <constraint firstItem="Caa-hd-f37" firstAttribute="trailing" secondItem="8ft-xS-Fiv" secondAttribute="trailing" id="wVy-SU-5fQ"/>
-                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="leading" secondItem="Caa-hd-f37" secondAttribute="leading" id="xTA-dd-9qV"/>
+                            <constraint firstItem="Sm7-Y0-SFO" firstAttribute="bottom" secondItem="Caa-hd-f37" secondAttribute="bottom" id="zId-gK-N8E"/>
                             <constraint firstAttribute="trailing" secondItem="VKq-pQ-pLm" secondAttribute="trailing" id="zg6-Cr-Jx0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Caa-hd-f37"/>
